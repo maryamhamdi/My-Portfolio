@@ -1,0 +1,83 @@
+.sikll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.sikll .title {
+  margin-bottom: 3rem;
+  position: relative;
+}
+.sikll .title::before {
+  content: "";
+  position: absolute;
+  background: var(--blue);
+  width: 120px;
+  height: 3px;
+  bottom: -12px;
+  left: 40px;
+}
+.sikll .title h1 {
+  color: var(--blue);
+
+  font-size: 45px;
+  font-weight: 500;
+}
+.sikll .title span {
+  color: var(--title);
+
+  margin-left: 10px;
+}
+
+.sikll .data {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sikll .element {
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.sikll .element:hover {
+  outline: 1px solid var(--hoverBlur);
+  box-shadow: 2px 1px 10px var(--hoverBlur);
+}
+
+.sikll .data .icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  color: var(--blue);
+}
+.sikll .data h3 {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--title);
+}
+@media (min-width: 1200px) {
+  .data {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .data {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .data {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

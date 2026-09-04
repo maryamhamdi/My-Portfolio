@@ -1,0 +1,239 @@
+a {
+  color: var(--title);
+  transition: 0.3s;
+}
+a:hover {
+  color: var(--blue);
+}
+.home {
+  margin-top: 3rem;
+  display: flex;
+}
+.home .left {
+  flex-grow: 1;
+}
+.home .right {
+  margin-top: 3rem;
+  width: 500px;
+}
+/* ========imge=========== */
+@keyframes popupImge {
+  0% {
+    scale: 0.1;
+  }
+  25% {
+    scale: 0.99;
+  }
+  50% {
+    scale: 0.92;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+.home .left .image {
+  margin-bottom: 3rem;
+}
+.home .left .image img {
+  animation: popupImge 1s forwards;
+  width: 355px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid var(--blue);
+}
+.home .left .image span {
+  color: var(--blue);
+}
+/* ==============text========== */
+.home .left .text {
+  margin: 2rem 0;
+  color: var(--title);
+}
+.home .left .text h1 {
+  margin: 1rem 0;
+  font-size: 50px;
+  letter-spacing: 2px;
+  display: flex;
+  position: relative;
+}
+.home .left .text h1::after {
+  margin-left: 10px;
+  border-right: 3px solid var(--blue);
+}
+.home .left .text h2::after {
+  content: "";
+  animation: show_hide 8s infinite;
+  border-right: 3px solid var(--blue);
+}
+
+@keyframes show_hide {
+  /* Front End Developer */
+  0%   { content: "F"; }
+  4%   { content: "Fr"; }
+  8%   { content: "Fro"; }
+  12%  { content: "Fron"; }
+  16%  { content: "Front"; }
+  20%  { content: "Front E"; }
+  24%  { content: "Front En"; }
+  28%  { content: "Front End"; }
+  32%  { content: "Front End D"; }
+  36%  { content: "Front End De"; }
+  40%  { content: "Front End Dev"; }
+  44%  { content: "Front End Deve"; }
+  48%  { content: "Front End Devel"; }
+  52%  { content: "Front End Develo"; }
+  56%  { content: "Front End Develop"; }
+  60%  { content: "Front End Develope"; }
+  64%  { content: "Front End Developer"; }
+
+  /* مسح */
+  68%  { content: "Front End Develope"; }
+  72%  { content: "Front End Develop"; }
+  76%  { content: "Front End Devel"; }
+  80%  { content: "Front End Dev"; }
+  84%  { content: "Front End"; }
+  88%  { content: "Front"; }
+  92%  { content: "Fr"; }
+  96%  { content: ""; }
+
+  /* React JS Developer */
+  97%  { content: "R"; }
+  98%  { content: "Re"; }
+  99%  { content: "Rea"; }
+  100% { content: "React JS Developer"; }
+}
+.home .left .text h2 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+/* ========icon ============= */
+.home .left .icon {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+.home .left .icon div {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.home .left .icon div:hover {
+  color: var(--blue);
+}
+.home .left .icon div:active {
+  scale: 0.8;
+}
+/* =========== buttom cv =========== */
+.home .left .cv a {
+  color: var(--title) !important;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--blue);
+  padding: 10px 30px;
+  max-width: 200px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.home .left .cv a:first-child {
+  font-weight: bold;
+}
+/* ===========animation Cv */
+@keyframes bigF {
+  0% {
+    gap: 20px;
+  }
+  50% {
+  }
+  100% {
+    max-width: 230px;
+    gap: 50px;
+  }
+}
+@keyframes bigE {
+  0% {
+    max-width: 230px;
+    gap: 50px;
+  }
+  50% {
+  }
+  100% {
+    gap: 20px;
+  }
+}
+@keyframes retrnF {
+  0% {
+    rotate: 0deg;
+  }
+  50% {
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+@keyframes retrnE {
+  0% {
+    rotate: 360deg;
+  }
+  50% {
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+.home .left .cv a:hover {
+  animation: bigF 0.7s 1 forwards;
+  background: var(--hoverBlur);
+}
+.home .left .cv a:not(:hover) {
+  animation: bigE 0.7s 1 forwards;
+}
+.home .left .cv a:hover .download {
+  animation: retrnF 0.7s 1 forwards;
+}
+.home .left .cv a:not(:hover) .download {
+  animation: retrnE 0.7s 1 forwards;
+}
+
+/* =====responsive============= */
+@media (max-width: 1300px) {
+  .home .right {
+    width: 400px;
+  }
+}
+@media (max-width: 1200px) {
+  .home .right {
+    width: 340px;
+  }
+}
+@media (max-width: 900px) {
+  .home .right {
+    margin-top: 7rem;
+    width: 260px;
+  }
+}
+@media (max-width: 800px) {
+  .home .right {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .home .left .text h1 {
+    display: block;
+  }
+  .home .left .typing {
+    margin-left: 0px;
+  }
+  .home .left .text h1 {
+    padding-bottom: 50px;
+  }
+  .home .left .text h1::after {
+    /* margin-left: 100px; */
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: -10px;
+  }
+}

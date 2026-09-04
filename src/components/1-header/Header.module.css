@@ -1,0 +1,129 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  margin-top: 1.2rem;
+}
+header nav {
+  background: var(--blue);
+  padding: 0.77rem 1.6rem;
+  border-radius: 55px;
+  box-shadow: 1px 1px 2px #2323242a;
+}
+header .bar {
+  display: none;
+}
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+header nav ul a {
+  color: var(--title);
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+header nav ul a:hover {
+  color: var(--title);
+}
+header button {
+  all: unset;
+  color: var(--title);
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid rgba(60, 146, 238, 0.321);
+  color: var(--sabTitle);
+}
+header button .moon {
+  color: var(--blue);
+}
+header button:hover {
+  border: 1px solid var(--blue);
+  color:var(--title);
+  rotate: 360deg;
+}
+header button:active {
+  scale: 0.85;
+}
+/* ----------pop up */
+header .popup {
+  backdrop-filter: blur(4px);
+  background-color: rgba(40, 40, 48, 0.582);
+  inset: 0;
+  position: fixed;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+@keyframes mymove {
+  0% {
+    scale: 0.4;
+  }
+  50% {
+    scale: 1.15;
+  }
+  100% {
+    scale: 1;
+  }
+}
+header .model {
+  animation: mymove 0.7s 1;
+  margin: 2rem auto;
+  width: 87%;
+  background: var(--secondary);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  box-shadow: 1px 1px 5px var(--hoverBlur), -1px -1px 5px var(--hoverBlur);
+}
+header .model ul li {
+  border-bottom: 2px solid var(--bordar);
+  padding: 1rem;
+}
+header .model ul li:last-child {
+  border-bottom: none;
+}
+header .model a {
+  color: var(--title);
+  font-weight: 600;
+  transition: 0.5s;
+}
+header .model a:hover {
+  color: var(--blue);
+}
+header .model .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 50x;
+  height: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  background: none;
+}
+header .model .close:hover {
+  font-size: 22px;
+  color: red;
+  rotate: 180deg;
+}
+@media (max-width: 700px) {
+  header {
+    padding: 0 0.7rem;
+  }
+  header nav {
+    display: none;
+  }
+  header .bar {
+    display: block;
+  }
+  /* header button:hover,
+  header .model .close:hover {
+    rotate: 0deg;
+  } */
+}

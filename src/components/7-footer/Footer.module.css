@@ -1,0 +1,26 @@
+footer {
+  margin-bottom: 3rem;
+}
+.footer,
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.footer .name {
+  color: var(--sabTitle);
+}
+.footer .name span {
+  color: var(--blue);
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+  }
+}

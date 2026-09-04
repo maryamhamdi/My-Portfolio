@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #000;
+  --secondary: #18181b;
+  --bordar: rgba(63, 63, 70, 0.4);
+  --title: rgb(244, 244, 245);
+  --sabTitle: rgb(140, 140, 148);
+  --blue: #3c91ee;
+  --hoverBlur: #255a92;
+  --backgrForm: #d4d4d8;
+  --backgrFormFoces: #bfbfc3;
+}
+/* .dark {
+  --primary: #000;
+  --secondary: #18181b;
+  --title: rgb(244, 244, 245);
+  --sabTitle: rgb(140, 140, 148);
+  
+} */
+.light {
+  --primary: #faf9f9;
+  --secondary: #f3f3f3;
+  --bordar: rgba(214, 214, 215, 0.4);
+  --hoverBlur: #3c91ee;
+  --title: #000;
+  --sabTitle: #75767e;
+  --backgrForm: #e9e6e600;
+  --backgrFormFoces: #ebebeb;
+}
+body {
+  background: var(--primary);
+}
+.devider {
+  border-bottom: 1px solid var(--bordar);
+  margin: 3rem 0rem;
+  width: calc(100% + 8rem);
+  margin-left: -4rem;
+}
+.container {
+  border: solid 1px var(--bordar);
+  width: 86%;
+  margin: auto;
+  background-color: var(--secondary);
+  color: #fff;
+  padding: 0 4rem;
+  position: relative;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+.container .top button:first-child {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--blue);
+  border: none;
+  font-size: 25px;
+  color: var(--title);
+  transition: 0.3s;
+  bottom: 2rem;
+  right: 1rem;
+  padding-top: 5px;
+}
+.container .top button:first-child:hover {
+  background: var(--hoverBlur);
+  padding-bottom: 7px;
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 0 2rem;
+  }
+  .devider {
+    width: calc(100% + 4rem);
+    margin-left: -2rem;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    width: 97%;
+    padding: 0 1rem;
+  }
+  .devider {
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+  }
+  .container .top button:first-child {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--blue);
+    border: none;
+    font-size: 20px;
+    color: var(--title);
+    transition: 0.3s;
+    bottom: 1.5rem;
+    right: 1rem;
+  }
+}
